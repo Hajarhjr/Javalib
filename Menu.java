@@ -11,9 +11,10 @@ public class Menu {
         int choix;
 do {
     System.out.println("le menu:");
-    System.out.println("1. Ajouter un livre");
-    System.out.println("2. Ajouter un etudiant");
-    System.out.println("3. Quitter");
+    System.out.println("1 Ajouter un livre");
+    System.out.println("2 Ajouter un etudiant");
+    System.out.println("3 supprimer un livre ");
+    System.out.println("4 Quitter");
     System.out.print("Entrez votre choix ");
     choix = scanner.nextInt();
     scanner.nextLine();
@@ -27,13 +28,21 @@ do {
             library.addStudent(newstudent);
             break;
         case 3:
-             System.out.println("au revoir !!");
-             break;
+            System.out.println("donner le titre de livre a supprimer");
+            String titre = scanner.nextLine();
+            Book newBook1 = new Book(titre);
+            for(Book NBK: library.books ){
+                  library.deletebook(NBK);
+            }
+            break;
+        case 4:
+            System.out.println("au revoir !!");
+            break;
         default:
             System.out.println("erreur !!!!");
             break;
     }
-}while (choix!=3);
+}while (choix!=4);
 
     }
 
@@ -64,4 +73,5 @@ do {
         Book newBook = new Book(titre, auteur, numero, datepublication);
         return newBook;
     }
+
 }
