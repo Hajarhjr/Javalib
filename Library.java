@@ -21,17 +21,33 @@ public class Library {
         }
     }
 
-    public void deletebook(Book newbookdl) {
+    public void deletebook(String newbookd) {
 
         for (Book nb : books) {
-            if (nb.equals(newbookdl)) {
-       System.out.println("ce livre deja exist !!");
-            } else {
-                books.remove(newbookdl);
+            if (newbookd.equals(nb.titre)) {
+                books.remove(nb);
+                System.out.println("ce livre est supprimer!!");
+                return ;
             }
-
         }
+        System.out.println("y a aucun livre ");
 
 
     }
+public void serchbook() {
+    for (Book sbook : books) {
+        if (books.contains(sbook)) {
+            System.out.println("ce livre est exist !!");
+            System.out.println("le titre de livre est "+sbook.titre);
+            System.out.println("l'auteur  de livre est "+sbook.auteur);
+            System.out.println("le numero de livre est "+sbook.numero);
+            System.out.println("la date de publication de livre est "+sbook.datepublication);
+        } else {
+            System.out.println("ce livre est pas exist!!");
+        }
+
+    }
+
+
+}
 }

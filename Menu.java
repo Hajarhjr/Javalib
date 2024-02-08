@@ -10,11 +10,13 @@ public class Menu {
         Scanner scanner =new Scanner(System.in);
         int choix;
 do {
-    System.out.println("le menu:");
-    System.out.println("1 Ajouter un livre");
-    System.out.println("2 Ajouter un etudiant");
+    System.out.println("le menu :");
+    System.out.println("1 ajouter un livre");
+    System.out.println("2 ajouter un etudiant");
     System.out.println("3 supprimer un livre ");
-    System.out.println("4 Quitter");
+    System.out.println("4 pour chercher un livre ");
+    System.out.println("5 pour modifier un livre ");
+    System.out.println("0 Quitter");
     System.out.print("Entrez votre choix ");
     choix = scanner.nextInt();
     scanner.nextLine();
@@ -30,19 +32,26 @@ do {
         case 3:
             System.out.println("donner le titre de livre a supprimer");
             String titre = scanner.nextLine();
-            Book newBook1 = new Book(titre);
-            for(Book NBK: library.books ){
-                  library.deletebook(NBK);
-            }
+            Book newbookd = new Book(titre);
+            library.deletebook(newbookd.titre);
+
             break;
         case 4:
-            System.out.println("au revoir !!");
+            System.out.println("donner la date de publication de livre ");
+            String datepublication = scanner.nextLine();
+            Book nbook = new Book(datepublication);
+            library.serchbook();
+            break;
+        case 5:
+
+        case 0:
+            System.out.println("goodbay !!");
             break;
         default:
-            System.out.println("erreur !!!!");
+            System.out.println(" erreur  !!!!");
             break;
     }
-}while (choix!=4);
+}while (choix!=0);
 
     }
 

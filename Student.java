@@ -1,8 +1,10 @@
+import java.util.ArrayList;
 
 public class Student {
-    private String nom;
-    private String adresse;
-    private int id;
+    public String nom;
+    public String adresse;
+    public int id;
+    public ArrayList<Book> stdBook;
     public Student(String nom,String adresse,int id){
         this.nom=nom;
         this.adresse=adresse;
