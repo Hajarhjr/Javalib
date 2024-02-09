@@ -26,20 +26,19 @@ public class Book {
 
    }
     public ArrayList<Book> livres = new ArrayList<>();
-    public Book edit() {
+    public void edit() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("donner le ttre de la livre a modifier");
          String titree =scanner.nextLine();
-
+         Book book1 = new Book();
         for (Book book : livres) {
-            if (livres.contains(book)) {
-                return book;
+            if (book.titre.equals(titree)) {
+                book1 = book;
             }
-            else
-                return null;
+//            else
+//                System.out.println("ce livre pas exist");
         }
-
-        if(titree!=null) {
+        if (book1 != null){
             System.out.println("donner le nouvelle titre ");
             String titre = scanner.nextLine();
             System.out.println("donner le nouvelle auteur ");
@@ -49,17 +48,13 @@ public class Book {
             scanner.nextLine();
             System.out.println("donner le nouvelle date ");
             String datepublication = scanner.nextLine();
-            Book bookaditer = new Book();
-            bookaditer.titre = titre;
-            bookaditer.auteur = auteur;
-            bookaditer.numero = numero;
-            bookaditer.datepublication = datepublication;
+//            Book bookaditer = new Book();
+            book1.titre = titre;
+            book1.auteur = auteur;
+            book1.numero = numero;
+            book1.datepublication = datepublication;
             System.out.println("bien modifier ");
-
         }
-        else
-            System.out.println("ce livre pas exist");
-        return null;
     }
 }
 
