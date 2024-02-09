@@ -34,6 +34,14 @@ public class Library {
 
 
     }
+    public void showbook(){
+        for(Book shbook : books){
+            System.out.println("le titre est" +shbook.titre);
+            System.out.println("l'auteur de le livre est" +shbook.auteur);
+            System.out.println("le numero de livre est " +shbook.numero);
+            System.out.println("la date de publication est " +shbook.datepublication);
+        }
+    }
 public void serchbook() {
     for (Book sbook : books) {
         if (books.contains(sbook)) {

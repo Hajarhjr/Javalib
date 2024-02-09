@@ -7,6 +7,7 @@ public class Menu {
 
     public static void main(String[] args) {
         Library  library=new Library();
+        Book book=new Book();
         Scanner scanner =new Scanner(System.in);
         int choix;
 do {
@@ -16,6 +17,8 @@ do {
     System.out.println("3 supprimer un livre ");
     System.out.println("4 pour chercher un livre ");
     System.out.println("5 pour modifier un livre ");
+    System.out.println("6  livres empruntés par letudiant   ");
+    System.out.println("7 afficher un livre");
     System.out.println("0 Quitter");
     System.out.print("Entrez votre choix ");
     choix = scanner.nextInt();
@@ -44,6 +47,16 @@ do {
             break;
         case 5:
 
+
+            //Book newbookdd = new Book(titree);
+            book.edit();
+            library.showbook();
+            break;
+        case 6:
+            break;
+        case 7:
+              library.showbook();
+            break;
         case 0:
             System.out.println("goodbay !!");
             break;
