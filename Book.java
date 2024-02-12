@@ -1,4 +1,4 @@
-package testjava;
+
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -11,66 +11,66 @@ public class Book {
     private boolean reserved;
     public boolean emprinter = false;
 
-      public Book(String titre){
-    this.titre=titre;
-}
+    public Book(String titre){
+        this.titre=titre;
+    }
 
     public Book(String titre, String auteur, int numero,String datepublication){
         this.titre=titre;
         this.auteur=auteur;
         this.numero=numero;
         this.datepublication=datepublication;
-      
+
         this.reserved=false;
     }
-   public Book() {
-		
-	}
+    public Book() {
+
+    }
 
 
-public String gettitre() {
-	   return titre;
-   }
-   public void settitre(String titre) {
-	   this.titre=titre;
-   }
-   public String getauteur() {
-	   return auteur;
-   }
-   public void setauteur(String auteur) {
-	   this.auteur=auteur;
-   }
-  public int getnumero() {
-	  return numero;
-  }
-  public void setnumero(int numro) {
-	  this.numero = numero;
-  }
-  public String getdatepublication() {
-	  return datepublication;
-  }
-  public void setdatepublication(String datepublication) {
-	  this.datepublication=datepublication;
-	  
-  }
-  
-  
+    public String gettitre() {
+        return titre;
+    }
+    public void settitre(String titre) {
+        this.titre=titre;
+    }
+    public String getauteur() {
+        return auteur;
+    }
+    public void setauteur(String auteur) {
+        this.auteur=auteur;
+    }
+    public int getnumero() {
+        return numero;
+    }
+    public void setnumero(int numro) {
+        this.numero = numero;
+    }
+    public String getdatepublication() {
+        return datepublication;
+    }
+    public void setdatepublication(String datepublication) {
+        this.datepublication=datepublication;
 
-  public boolean getreserver() {
-	  return reserved;
-  }
-  public void setreserver(boolean reserved) {
-	  this.reserved = reserved;
-  }
-   
- 
-   
+    }
+
+
+
+    public boolean getreserver() {
+        return reserved;
+    }
+    public void setreserver(boolean reserved) {
+        this.reserved = reserved;
+    }
+
+
+
     public ArrayList<Book> livres = new ArrayList<>();
     public void edit() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("donner le ttre de la livre a modifier");
-         String titree =scanner.nextLine();
-         Book book1 = new Book();
+        String titree =scanner.nextLine();
+        Book book1 = new Book();
         for (Book book : livres) {
             if (book.titre.equals(titree)) {
                 book1 = book;

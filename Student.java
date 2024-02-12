@@ -1,4 +1,4 @@
-package testjava;
+
 
 import java.util.ArrayList;
 
@@ -8,33 +8,33 @@ public class Student {
     private int id;
     public ArrayList<Book> booksemprunter = new ArrayList<>();
     public ArrayList<Book> booksreserver= new ArrayList<>();
-    
-    
+
+
     public Student(String nom,String adresse,int id){
         this.nom=nom;
         this.adresse=adresse;
         this.id=id;
-       
+
     }
     public String getnom() {
-    	return nom;
-    	
+        return nom;
+
     }
     public void setnom(String nom) {
-    	this.nom=nom;
-    	
+        this.nom=nom;
+
     }
-    public String adresse() {
-    	return adresse;
+    public String getadresse() {
+        return adresse;
     }
-    public void adresse(String adresse) {
-    	this.adresse=adresse;
+    public void setadresse(String adresse) {
+        this.adresse=adresse;
     }
     public int id() {
-    	return id;
+        return id;
     }
     public void id(int id) {
-    	this.id=id;
+        this.id=id;
     }
 
 }
