@@ -1,12 +1,15 @@
+package testjava;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Book {
-    public String titre;
-    public String auteur;
-    public int numero;
-    public String datepublication;
-    public Student currentstudent;
+    private String titre;
+    private String auteur;
+    private int numero;
+    private String datepublication;
+    private boolean reserved;
+    public boolean emprinter = false;
 
       public Book(String titre){
     this.titre=titre;
@@ -17,14 +20,51 @@ public class Book {
         this.auteur=auteur;
         this.numero=numero;
         this.datepublication=datepublication;
+      
+        this.reserved=false;
     }
-   public Book(){
+   public Book() {
+		
+	}
 
-   }
-   public Book(Student currentstudent){
-          this.currentstudent=currentstudent;
 
+public String gettitre() {
+	   return titre;
    }
+   public void settitre(String titre) {
+	   this.titre=titre;
+   }
+   public String getauteur() {
+	   return auteur;
+   }
+   public void setauteur(String auteur) {
+	   this.auteur=auteur;
+   }
+  public int getnumero() {
+	  return numero;
+  }
+  public void setnumero(int numro) {
+	  this.numero = numero;
+  }
+  public String getdatepublication() {
+	  return datepublication;
+  }
+  public void setdatepublication(String datepublication) {
+	  this.datepublication=datepublication;
+	  
+  }
+  
+  
+
+  public boolean getreserver() {
+	  return reserved;
+  }
+  public void setreserver(boolean reserved) {
+	  this.reserved = reserved;
+  }
+   
+ 
+   
     public ArrayList<Book> livres = new ArrayList<>();
     public void edit() {
         Scanner scanner = new Scanner(System.in);
